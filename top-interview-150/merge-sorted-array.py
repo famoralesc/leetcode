@@ -2,9 +2,6 @@ from typing import List
 
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
-        """
-        Do not return anything, modify nums1 in-place instead.
-        """
         i = n + m - 1
         j = 0
         while i >= 0:
