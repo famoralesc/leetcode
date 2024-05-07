@@ -2,20 +2,42 @@ import sys
 import time
 
 def fibonacci(number):
+    """Calculate the fibonacci number using the traditional 
+    recursive way.
+
+    Examples
+    --------
+    >>> fibonacci(20)
+    6765
+    >>> fibonacci(11)
+    89
+    """
     if number < 2:
         return number
     return fibonacci(number -1 ) + fibonacci(number -2)
 
 def fibonacci2(number):
-    r = {}
+    """Calculate the fibonacci number using dynamic programming.
+    This solution stores the result on each iteration in a dictionary,
+    such as 
+    fib[number] = fib[number - 1] + fib[number - 2]ßß
+
+    Examples
+    --------
+    >>> fibonacci2(20)
+    6765
+    >>> fibonacci2(11)
+    89
+    """
+    fib = {}
     a, b = 0, 1
     if number < 2:
         return number
     n = 2
     while n <= number:
-        r[n] = r.get(n - 1, a) + r.get(n - 2, b)
+        fib[n] = fib.get(n - 1, a) + fib.get(n - 2, b)
         n += 1
-    return r[number]
+    return fib[number]
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
