@@ -1,7 +1,7 @@
 import sys
 import time
 
-def fibonacci(number):
+def fibonacci(number: int) -> int:
     """Calculate the fibonacci number using the traditional 
     recursive way.
 
@@ -16,7 +16,7 @@ def fibonacci(number):
         return number
     return fibonacci(number -1 ) + fibonacci(number -2)
 
-def fibonacci2(number):
+def fibonacci2(number: int) -> int:
     """Calculate the fibonacci number using dynamic programming.
     This solution stores the result on each iteration in a dictionary,
     such as 
