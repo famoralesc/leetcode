@@ -20,7 +20,7 @@ def fibonacci2(number: int) -> int:
     """Calculate the fibonacci number using dynamic programming.
     This solution stores the result on each iteration in a dictionary,
     such as 
-    fib[number] = fib[number - 1] + fib[number - 2]ßß
+    fib[number] = fib[number - 1] + fib[number - 2]
 
     Examples
     --------
